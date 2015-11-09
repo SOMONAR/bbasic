@@ -43,7 +43,7 @@
     
     <menu name="ConfigurationSubTabBar" extends="CommonTabBarMenu" extends-resource="component://common/widget/CommonMenus.xml"
           menu-container-style="button-bar button-style-2 no-clear">
-        <menu-item name="createSystemProperty" title="${uiLabelMap.NewSystemProperty}">
+        <menu-item name="NewSystemProperty" title="${uiLabelMap.NewSystemProperty}">
             <condition>
                 <or>
                     <if-has-permission permission="${activeApp}" action="_ADMIN"/>
