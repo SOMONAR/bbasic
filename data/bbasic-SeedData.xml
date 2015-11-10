@@ -22,7 +22,7 @@
     
     <VisualTheme visualThemeId="bbasic" visualThemeSetId="BACKOFFICE" description="Bootstrap Basic Theme - Basic Bootstrap integration, floating Layout, bidirectional"/>
     
-    <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_NAME" resourceValue="OFBiz Bootstrap Sunrise Theme" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_NAME" resourceValue="OFBiz Bootstrap Basic Theme" sequenceId="01"/>
     <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_SHORTCUT_ICON" resourceValue="/images/ofbiz.ico" sequenceId="01"/>
     <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_HDR_IMAGE_URL" resourceValue="/bbasic/images/ofbiz-logo-header.png" sequenceId="01"/>
     <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_SCREENSHOT" resourceValue="/bbasic/images/screenshot.png" sequenceId="01"/>
