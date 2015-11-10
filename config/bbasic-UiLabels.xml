@@ -17,7 +17,7 @@
  -->
 <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/ofbiz-properties.xsd">
     <property key="bbasicApplication">
-        <value xml:lang="en">bbasic</value>
+        <value xml:lang="en">BootStrap Basic Theme</value>
     </property>
     <property key="bbasicCompanyName">
         <value xml:lang="en">bbasic</value>
