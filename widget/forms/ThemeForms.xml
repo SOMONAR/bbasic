@@ -28,14 +28,14 @@
             <display-entity entity-name="Enumeration" key-field-name="enumId"/>
         </field>
         <field name="resourceValue" title="${uiLabelMap.CommonValue}"><display/></field>
-        <field name="editLink" widget-style="${${theme}Styles.buttontext}" title=" ">
+        <field name="editLink" widget-style="buttontext" title=" ">
            <hyperlink target="editthemeresource" description="${uiLabelMap.CommonEdit}">
                 <parameter param-name="visualThemeId"/>
                 <parameter param-name="resourceTypeEnumId"/>
                 <parameter param-name="sequenceId"/>
             </hyperlink>
         </field>
-        <field name="deleteAction" widget-style="${${theme}Styles.buttontext}" title=" ">
+        <field name="deleteAction" widget-style="buttontext" title=" ">
            <hyperlink target="removethemeresource" description="${uiLabelMap.CommonDelete}" request-confirmation="true">
                 <parameter param-name="visualThemeId"/>
                 <parameter param-name="resourceTypeEnumId"/>
@@ -70,7 +70,7 @@
         <field name="sequenceId" title="${uiLabelMap.CommonSequenceNum}"><display/></field>
         <field name="resourceValue" title="${uiLabelMap.CommonValue}" required-field="true"><text size="100"/></field>
         <field name="dummy99" title=" "><display/></field>
-        <field name="submitButton" title="${uiLabelMap.CommonUpdate}" widget-style="${${theme}Styles.buttontext}" >
+        <field name="submitButton" title="${uiLabelMap.CommonUpdate}" widget-style="buttontext" >
             <submit button-type="button" request-confirmation="true"/>
         </field>
     </form>

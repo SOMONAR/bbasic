@@ -24,13 +24,13 @@
         <field name="systemPropertyId"><display/></field>
         <field name="systemPropertyValue"><display/></field>
         <field name="description"><display/></field>
-        <field name="editLink" widget-style="${${theme}Styles.buttontext}" title=" ">
+        <field name="editLink" widget-style="buttontext" title=" ">
            <hyperlink target="editsystemproperty" description="${uiLabelMap.CommonEdit}">
                 <parameter param-name="systemResourceId"/>
                 <parameter param-name="systemPropertyId"/>
             </hyperlink>
         </field>
-        <field name="deleteAction" widget-style="${${theme}Styles.buttontext}" title=" ">
+        <field name="deleteAction" widget-style="buttontext" title=" ">
            <hyperlink target="removesystemproperty" description="${uiLabelMap.CommonDelete}" request-confirmation="true">
                 <parameter param-name="systemResourceId"/>
                 <parameter param-name="systemPropertyId"/>
@@ -44,7 +44,7 @@
         <field name="systemPropertyValue" required-field="true"><text size="100"/></field>
         <field name="description" required-field="true"><textarea cols="60" rows="2"/></field>
         <field name="dummy99" title=" "><display/></field>
-        <field name="submitButton" title="${uiLabelMap.CommonSave}" widget-style="${${theme}Styles.buttontext}" >
+        <field name="submitButton" title="${uiLabelMap.CommonSave}" widget-style="buttontext" >
             <submit button-type="button"/>
         </field>
     </form>
@@ -55,7 +55,7 @@
         <field name="systemPropertyValue" required-field="true"><text size="100"/></field>
         <field name="description" title="${uiLabelMap.CommonDescription}" required-field="true"><textarea cols="60" rows="2"/></field>
         <field name="dummy99" title=" "><display/></field>
-        <field name="submitButton" title="${uiLabelMap.CommonUpdate}" widget-style="${${theme}Styles.buttontext}" >
+        <field name="submitButton" title="${uiLabelMap.CommonUpdate}" widget-style="buttontext" >
             <submit button-type="button" request-confirmation="true"/>
         </field>
     </form>
