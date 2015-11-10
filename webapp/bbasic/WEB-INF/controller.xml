@@ -103,17 +103,17 @@
     </request-map>
     
     <!-- View Mappings -->
-    <view-map name="main" type="screen" page="component://sunrise/widget/sunrise-Screens.xml#main"/>
+    <view-map name="main" type="screen" page="component://bbasic/widget/bbasic-Screens.xml#main"/>
     
     <!-- Configuration -->
-    <view-map name="configuration" type="screen" page="component://sunrise/widget/ConfigurationScreens.xml#Configuration"/>
-    <view-map name="systemproperties" type="screen" page="component://sunrise/widget/ConfigurationScreens.xml#SystemProperties"/>
-    <view-map name="newsystemproperty" type="screen" page="component://sunrise/widget/ConfigurationScreens.xml#NewSystemProperty"/>
-    <view-map name="editsystemproperty" type="screen" page="component://sunrise/widget/ConfigurationScreens.xml#EditSystemProperty"/>
+    <view-map name="configuration" type="screen" page="component://bbasic/widget/ConfigurationScreens.xml#Configuration"/>
+    <view-map name="systemproperties" type="screen" page="component://bbasic/widget/ConfigurationScreens.xml#SystemProperties"/>
+    <view-map name="newsystemproperty" type="screen" page="component://bbasic/widget/ConfigurationScreens.xml#NewSystemProperty"/>
+    <view-map name="editsystemproperty" type="screen" page="component://bbasic/widget/ConfigurationScreens.xml#EditSystemProperty"/>
     
     <!-- theme related view-maps -->
-    <view-map name="themeresources" type="screen" page="component://sunrise/widget/ThemeScreens.xml#ThemeResources"/>
-    <view-map name="newthemeresource" type="screen" page="component://sunrise/widget/ThemeScreens.xml#NewThemeResource"/>
-    <view-map name="editthemeresource" type="screen" page="component://sunrise/widget/ThemeScreens.xml#EditThemeResource"/>
+    <view-map name="themeresources" type="screen" page="component://bbasic/widget/ThemeScreens.xml#ThemeResources"/>
+    <view-map name="newthemeresource" type="screen" page="component://bbasic/widget/ThemeScreens.xml#NewThemeResource"/>
+    <view-map name="editthemeresource" type="screen" page="component://bbasic/widget/ThemeScreens.xml#EditThemeResource"/>
     
 </site-conf>
