@@ -32,16 +32,16 @@
     <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_RTL_STYLESHEET" resourceValue="/bbasic/images/css/stylertl.css" sequenceId="02"/>
     
     <!-- ftl references -->
-    <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_HDR_TMPLT_LOC" resourceValue="component://bbasic/includes/header.ftl" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_HDR_TMPLT_LOC" resourceValue="component://bbasic/templates/header.ftl" sequenceId="01"/>
     <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_MSG_TMPLT_LOC" resourceValue="component://common/webcommon/includes/messages.ftl" sequenceId="01"/>
-    <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_FTR_TMPLT_LOC" resourceValue="component://bbasic/includes/footer.ftl" sequenceId="01"/>
-    <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_NAV_TMPLT_LOC" resourceValue="component://bbasic/includes/emptyAppBar.ftl" sequenceId="01"/>
-    <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_NAV_APPHDR_LOC" resourceValue="component://bbasic/includes/appbar.ftl" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_FTR_TMPLT_LOC" resourceValue="component://bbasic/templates/footer.ftl" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_NAV_TMPLT_LOC" resourceValue="component://bbasic/templates/emptyAppBar.ftl" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_NAV_APPHDR_LOC" resourceValue="component://bbasic/templates/appbar.ftl" sequenceId="01"/>
     
-    <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_SCRN_MACRO_LIB" resourceValue="component://bbasic/includes/templates/htmlScreenMacroLibrary.ftl" sequenceId="01"/>
-    <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_FORM_MACRO_LIB" resourceValue="component://bbasic/includes/templates/htmlFormMacroLibrary.ftl" sequenceId="01"/>
-    <!--  <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_TREE_MACRO_LIB" resourceValue="component://bbasic/includes/templates/htmlTreeMacroLibrary.ftl" sequenceId="01"/> -->
-    <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_MENU_MACRO_LIB" resourceValue="component://bbasic/includes/templates/htmlMenuMacroLibrary.ftl" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_SCRN_MACRO_LIB" resourceValue="component://bbasic/templates/includes/htmlScreenMacroLibrary.ftl" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_FORM_MACRO_LIB" resourceValue="component://bbasic/templates/includes/htmlFormMacroLibrary.ftl" sequenceId="01"/>
+    <!--  <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_TREE_MACRO_LIB" resourceValue="component://bbasic/templates/includes/htmlTreeMacroLibrary.ftl" sequenceId="01"/> -->
+    <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_MENU_MACRO_LIB" resourceValue="component://bbasic/templates/includes/htmlMenuMacroLibrary.ftl" sequenceId="01"/>
     
     <!-- js related -->
     <VisualThemeResource visualThemeId="bbasic" resourceTypeEnumId="VT_HDR_JAVASCRIPT" resourceValue="/images/jquery/jquery-1.11.0.min.js" sequenceId="01"/>
