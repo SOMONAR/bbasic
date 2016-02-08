@@ -867,18 +867,22 @@ Parameter: tabindex, String, optional - HTML tabindex number.
     <#if confirmation?has_content> onclick="return confirm('${confirmation?js_string}')"</#if>>
       <#if imgSrc?has_content><img src="${imgSrc}" alt=""/></#if>${description}</a>
 </#macro>
-<#macro makeHyperlinkString linkStyle hiddenFormName event action imgSrc title alternate linkUrl targetWindow description confirmation uniqueItemName="" height="" width="" id="">
+<#macro makeHyperlinkString linkStyle hiddenFormName event action imgSrc title targetParameters alternate linkUrl targetWindow description confirmation uniqueItemName="" height="" width="" id="">
     <#if uniqueItemName?has_content>
         <div id="${uniqueItemName}"></div>
         <a href="javascript:void(0);" id="${uniqueItemName}_link" 
         <#if style?has_content>class="${style}"</#if>>
         <#if description?has_content>${description}</#if></a>
         <script type="text/javascript">
-            function getRequestData () {
-                var data =  {
-                    <#--list parameterList as parameter>
-                        "${parameter.name}": "${parameter.value}",
-                    </#list-->
+            function ${uniqueItemName}_data () {
+                var data = {
+                <#if targetParameters?has_content>
+                    <#assign parameterMap = targetParameters?eval>
+                    <#assign parameterKeys = parameterMap?keys>
+                    <#list parameterKeys as key>
+                    "${key}": "${parameterMap[key]}",
+                    </#list>
+                </#if>
                     "presentation": "layer"
                 };
                 return data;
@@ -897,7 +901,7 @@ Parameter: tabindex, String, optional - HTML tabindex number.
                          jQuery.ajax({
                              url: "${linkUrl}",
                              type: "POST",
-                             data: getRequestData(),
+                             data: ${uniqueItemName}_data(),
                              success: function(data) {jQuery("#${uniqueItemName}").html(data);}
                          });
                  }
