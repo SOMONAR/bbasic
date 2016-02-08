@@ -27,6 +27,6 @@
         <para>
         </para>
     </section>
-        <xi:include href="../data/helpdata/HELP_bbasic.xml" />
+        <xi:include href="../data/helpdata/bbasic-Help.xml" />
     
 </chapter>
