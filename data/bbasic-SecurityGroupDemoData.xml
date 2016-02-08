@@ -17,10 +17,4 @@
  -->
  <entity-engine-xml>
     <SecurityGroupPermission groupId="FULLADMIN" permissionId="bbasic_ADMIN"/>
-    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="bbasic_CREATE"/>
-    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="bbasic_DELETE"/>
-    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="bbasic_UPDATE"/>
-    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="bbasic_VIEW"/>
-    <SecurityGroupPermission groupId="VIEWADMIN" permissionId="bbasic_VIEW"/>
-    <SecurityGroupPermission groupId="BIZADMIN" permissionId="bbasic_ADMIN"/>
 </entity-engine-xml>
