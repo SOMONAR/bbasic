@@ -56,6 +56,6 @@
         location="webapp/bbasic"
         base-permission="OFBTOOLS,bbasic"
         mount-point="/bbasic"
-        menu-name="Themes"
+        menu-name="secondary"
         />
 </ofbiz-component>
