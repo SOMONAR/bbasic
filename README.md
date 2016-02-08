@@ -1,2 +1,3 @@
+
 # bbasic
-Bootstrap based theme for OFBiz
+A Bootstrap based theme for Apache OFBiz&trade;
