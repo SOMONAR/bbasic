@@ -15,38 +15,6 @@
 
 -->
 
-<#macro renderMenuBegin boundaryComment="" id="" style="" title="">
-  <#if boundaryComment?has_content>
-<!-- ${boundaryComment} -->
-  </#if>
-  <#-- <div<#if id?has_content> id="${id}"<#elseif style?has_content> class="${style}"</#if>> -->
-  <#if style == "button-bar tab-bar">
-        <nav class="navbar navbar-default button-bar tab-bar" role="navigation">
-            <ul class="nav navbar-nav">
-                  <#if title?has_content>
-                  <li class="menuTitle"><a href="#">${title}</a></li>
-                  </#if>
-    <#elseif style == "button-bar button-style-2">
-        <#-- <nav class="navbar navbar-default button-bar button-style-2" role="navigation"> -->
-              <ul class="nav navbar-pills pull-right" role="tablist">
-    <#else>
-        <nav class="navbar navbar-default" role="navigation">
-              <ul class="nav navbar-nav">
-  </#if>
-    
-</#macro>
-
-<#macro renderMenuEnd boundaryComment="" style="">
-    <#if style == "button-bar button-style-2">
-        </ul>
-        <#else>
-            </ul>
-        </nav>
-    </#if>
-<#if boundaryComment?has_content>
-<!-- ${boundaryComment} -->
-</#if>
-</#macro>
 
 <#macro renderImage src id style width height border>
 <img src="${src}"<#if id?has_content> id="${id}"</#if><#if style?has_content> class="${style}"</#if><#if width?has_content> width="${width}"</#if><#if height?has_content> height="${height}"</#if><#if border?has_content> border="${border}"</#if> />
@@ -67,22 +35,61 @@
 <#if (linkType?has_content && "hidden-form" == linkType) || linkUrl?has_content></a><#rt/></#if>
 </#macro>
 
+<#macro renderMenuBegin boundaryComment="" id="" style="" title="">
+    <#assign menuStyle = style />
+    <#if boundaryComment?has_content>
+    <!-- ${boundaryComment} -->
+    </#if>
+    <#-- <div<#if id?has_content> id="${id}"<#elseif style?has_content> class="${style}"</#if>> -->
+    <#if style == "button-bar tab-bar">
+    <nav class="navbar navbar-default button-bar tab-bar" role="navigation">
+      <ul class="nav navbar-nav">
+            <#if title?has_content>
+                <li class="menuTitle"><a href="#">${title}</a></li>
+            </#if>
+    <#elseif style == "button-bar button-style-2">
+        <#-- <nav class="navbar navbar-default button-bar button-style-2" role="navigation"> -->
+        <#--<ul class="nav navbar-pills pull-right" role="tablist"> -->
+    <#else>
+        <nav class="navbar navbar-default" role="navigation">
+        <ul class="nav navbar-nav">
+  </#if>
+</#macro>
+
+<#macro renderMenuEnd boundaryComment="" style="">
+    <#if menuStyle == "button-bar button-style-2">
+        <#--</ul> -->
+    <#else>
+      </ul>
+    </nav>
+    </#if>
+<#if boundaryComment?has_content>
+<!-- ${boundaryComment} -->
+</#if>
+</#macro>
+
 <#macro renderMenuItemBegin style toolTip linkStr containsNestedMenus>
-    <#if style == "buttontext create">
-        <li role="presentation" <#if toolTip?has_content> title="${toolTip}"</#if>><#if linkStr?has_content>${linkStr}</#if><#if containsNestedMenus><ul></#if><#rt/>
-        <script type="text/javascript">
-          jQuery(".navbar-pills.pull-right li a.buttontext.create").each(function(){
-              var linkText = jQuery(this).html();
-              var data = '<span class="glyphicon glyphicon-plus"></span> '+linkText;
-              jQuery(this).removeClass('buttontext').removeClass('create').addClass("btn btn-primary btn-xs");
-              jQuery(this).html(data);
-              });
-        </script>
+    <#if menuStyle = "button-bar button-style-2">
+        <#if style == "buttontext create">
+            <div class="btn btn-primary btn-xs" <#if toolTip?has_content> title="${toolTip}"</#if>>
+                <#if linkStr?has_content>${linkStr}</#if>
+                <#if containsNestedMenus><ul></#if>
+                <#rt/>
+        <#else>
+            <div class="btn btn-default btn-xs" <#if toolTip?has_content> title="${toolTip}"</#if>>
+                <#if linkStr?has_content>${linkStr}</#if>
+                <#if containsNestedMenus><ul></#if><#rt/>
+        </#if>
     <#else>
         <li<#if style?has_content> class="${style}"</#if><#if toolTip?has_content> title="${toolTip}"</#if>><#if linkStr?has_content>${linkStr}</#if><#if containsNestedMenus><ul></#if><#rt/>
     </#if>
 </#macro>
 
 <#macro renderMenuItemEnd containsNestedMenus>
-<#if containsNestedMenus></ul></#if></li>
+    <#if menuStyle = "button-bar button-style-2">
+        </div>
+    <#else>
+        <#if containsNestedMenus></ul></#if>
+        </li>
+    </#if>
 </#macro>
