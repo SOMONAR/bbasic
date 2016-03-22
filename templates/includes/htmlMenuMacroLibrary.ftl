@@ -14,6 +14,7 @@
  limitations under the License.
 
 -->
+<#include 'component://widget/templates/htmlMenuMacroLibrary.ftl'>
 
 
 <#macro renderImage src id style width height border>

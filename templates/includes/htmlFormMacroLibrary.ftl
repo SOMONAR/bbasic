@@ -14,6 +14,7 @@
  limitations under the License.
 
 -->
+<#include 'component://widget/templates/htmlFormMacroLibrary.ftl'>
 
 <#macro renderField text>
   <#if text??>

@@ -14,6 +14,7 @@
  limitations under the License.
 
 -->
+<#include 'component://widget/templates/htmlScreenMacroLibrary.ftl'>
 
 <#macro renderScreenBegin>
 <!DOCTYPE html>
