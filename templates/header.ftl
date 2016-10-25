@@ -29,7 +29,7 @@
   <#assign userName = "">
 </#if>
 <#if defaultOrganizationPartyGroupName?has_content>
-  <#assign orgName = " - " + defaultOrganizationPartyGroupName?if_exists>
+  <#assign orgName = defaultOrganizationPartyGroupName?if_exists>
 <#else>
   <#assign orgName = "">
 </#if>
@@ -78,11 +78,6 @@
     </#if>
     <#if layoutSettings.VT_HDR_JAVASCRIPT?has_content>
         <#list layoutSettings.VT_HDR_JAVASCRIPT as javaScript>
-            <script src="<@ofbizContentUrl>${StringUtil.wrapString(javaScript)}</@ofbizContentUrl>" type="text/javascript"></script>
-        </#list>
-    </#if>
-    <#if layoutSettings.javaScripts?has_content>
-        <#list layoutSettings.javaScripts as javaScript>
             <script src="<@ofbizContentUrl>${StringUtil.wrapString(javaScript)}</@ofbizContentUrl>" type="text/javascript"></script>
         </#list>
     </#if>
@@ -231,19 +226,14 @@
                       </div><#-- btn-group ends -->
                   </li><#-- Secondary Applications ends -->
                   <#--if webSiteId?exists && requestAttributes._CURRENT_VIEW_?exists && helpTopic?exists-->
-                  <#if parameters.componentName?exists && requestAttributes._CURRENT_VIEW_?exists && helpTopic?exists>
-                    <#include "component://common/webcommon/includes/helplink.ftl" />
-                    <li><a class="btn <#if pageAvail?has_content> btn-default</#if> navbar-btn " href="javascript:lookup_popup1('showHelp?helpTopic=${helpTopic}&amp;portalPageId=${parameters.portalPageId?if_exists}','help' ,500,500);" title="${uiLabelMap.CommonHelp}"><span class="glyphicon glyphicon-question-sign"></span></a></li>
-                  </#if>
               </#if>
           </ul>
-          
           <ul class="nav navbar-nav navbar-right">
               <#if userLogin?exists>
-                  <#if orgName?has_content>
-                    <li class="org">${orgName}</li>
-                  </#if>
                   <#if userLogin.partyId?exists>
+                    <#if orgName?has_content>
+                    <li class="org"><div class="btn-group"><div class="btn btn-default navbar-btn">${orgName}</div></div></li>
+                  </#if>
                     <li>
                         <div class="navbar-btn">
                               <button class="btn btn-default" dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
@@ -278,7 +268,11 @@
                             <li><a href="${StringUtil.wrapString(layoutSettings.middleTopLink3!)}">${layoutSettings.middleTopMessage3?if_exists}</a></li>
                         </ul>
                     </li>
-            </#if>
+                </#if>
+                  <#if parameters.componentName?exists && requestAttributes._CURRENT_VIEW_?exists && helpTopic?exists>
+                    <#include "component://common/webcommon/includes/helplink.ftl" />
+                    <li><div class="btn-group"><a class="btn btn-default navbar-btn" href="javascript:lookup_popup1('showHelp?helpTopic=${helpTopic}&amp;portalPageId=${parameters.portalPageId?if_exists}','help' ,500,500);" title="${uiLabelMap.CommonHelp}"><span class="glyphicon glyphicon-question-sign"></span></a></div></li>
+                  </#if>
                   <li>
                       <div class="btn-group">
                         <a class="btn btn-default navbar-btn" href="<@ofbizUrl>logout</@ofbizUrl>"><span class="glyphicon glyphicon-off"></span>&nbsp;${uiLabelMap.CommonLogout}</a>

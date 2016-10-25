@@ -13,8 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
--->
 <#include 'component://widget/templates/htmlScreenMacroLibrary.ftl'>
+-->
 
 <#macro renderScreenBegin>
 <!DOCTYPE html>
@@ -173,7 +173,11 @@
         </#if>
     </div>
 </#if>
+<#if menuString??>
+<nav class="navbar-default" role="tablist">
 ${menuString}
+</nav>
+</#if>
 <#if collapsible>
     <div <#if collapsibleAreaId?has_content> id="${collapsibleAreaId}" </#if> class="panel-body collapse in">
 <#else>

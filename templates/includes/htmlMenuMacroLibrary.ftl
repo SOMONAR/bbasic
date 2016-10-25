@@ -49,8 +49,10 @@
                 <li class="menuTitle"><a href="#">${title}</a></li>
             </#if>
     <#elseif style == "button-bar button-style-2">
-        <#-- <nav class="navbar navbar-default button-bar button-style-2" role="navigation"> -->
-        <#--<ul class="nav navbar-pills pull-right" role="tablist"> -->
+            <#if title?has_content>
+                <li class="menuTitle"><a href="#">${title}</a></li>
+            </#if>
+        <ul class="nav navbar-pills" role="tablist">
     <#else>
         <nav class="navbar navbar-default" role="navigation">
         <ul class="nav navbar-nav">
@@ -58,8 +60,13 @@
 </#macro>
 
 <#macro renderMenuEnd boundaryComment="" style="">
-    <#if menuStyle == "button-bar button-style-2">
-        <#--</ul> -->
+    <#if menuStyle == "button-bar tab-bar">
+        </ul>
+        </nav>
+    <#elseif style == "button-bar button-style-2">
+        <#-- <nav class="navbar navbar-default button-bar button-style-2" role="navigation"> -->
+        </ul>
+        </nav>
     <#else>
       </ul>
     </nav>

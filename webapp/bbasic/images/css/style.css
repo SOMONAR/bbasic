@@ -30,11 +30,9 @@ background-image: none;
 background-color: #fff;
 color: #000;
 font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-font-size: 75%;
 line-height: 1.42857;
 padding-top: 15px;
 }
-
 /*********************  Nav Bar Styles ***********************/
 
 nav#header-navigation.navbar.navbar-default {
@@ -136,7 +134,6 @@ nav.navbar.navbar-default.button-bar.tab-bar {
 }
 .btn-primary:hover, .btn-primary:focus {
     background-color: #265a88;
-    background-position: 0 -15px;
 }
 .btn-primary:active, .btn-primary.active {
     background-color: #265a88;
@@ -416,5 +413,238 @@ div#footer.panel.panel-default {
     background-color: #f8f8f8;
     border-color: #e7e7e7;
 }
+.fieldgroup-title-bar ul .collapsed, .fieldgroup-title-bar ul .collapsed:hover {
+    background: rgba(0, 0, 0, 0) url("/images/expand.gif") no-repeat scroll left center;
+    min-height: 1.1em;
+    min-width: 1.1em;
+}
+.fieldgroup-title-bar ul .expanded, .fieldgroup-title-bar ul .expanded:hover {
+    background: rgba(0, 0, 0, 0) url("/images/collapse.gif") no-repeat scroll left center;
+    min-height: 1.1em;
+    min-width: 1.1em;
+}
 
+.btn-link:hover,
+.btn-link:focus {
+  color: #2a6496;
+  background-color: transparent;
+}
+.label {
+    border-radius: 0.25em;
+    color: #000;
+    display: inline;
+    font-size: 100%;
+    font-weight: bold;
+    line-height: 1;
+    padding: 0.2em 0.6em 0.3em;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
 
+.fieldgroup-body {
+    background-color: #fff;
+    border-bottom: thin solid #f5f5f5;
+    border-top: thin solid #999;
+    padding: 0.6em;
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+    font-size: 1,2em;
+    webkit-appearance: none;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*background-color: #fff;*/
+    border: 0.1em solid;
+    border-color: #999999;
+    margin: 0.2em;
+    color: #000;
+    outline: 0;
+    padding: 0.2em 0.3em;
+    vertical-align: middle;
+    
+    height: 1.8em;
+    
+}
+input[type="file"] {
+    border: 0.1em solid #999999;
+    height: 2.1em;
+    margin: 0.2em;
+    padding: 0.4em 0;
+    vertical-align: middle;
+}
+
+.ui-widget input,, .ui-widget textarea, .ui-widget button {
+    font-size: 1.1em;
+}
+.ui-widget .ui-widget {
+    font-size: 1em;
+}
+.ui-widget  .ui-widget select {
+    font-size: 1em;
+}
+#column-container h1, #column-container .h1 {
+    color: #251f16;
+    font-size: 17px;
+    font-weight: normal;
+    margin-bottom: 0.9em;
+    padding-left: 0.3em;
+    padding-top: 0.3em;
+}
+.nav {
+    list-style: outside none none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.panel-default {
+    border-color: #ddd;
+}
+
+.contentarea {
+    margin: 0px 0px 0px 0px;
+    padding:0 0 20px 0;
+}
+
+*/
+/* ======================== */
+/* ===== Table Styles ===== */
+/* ======================== */
+.basic-table {
+color: #000000;
+width: 100%;
+}
+
+form .basic-table,.screenlet-body .basic-table {
+margin-bottom: 0;
+}
+
+.basic-table tr td { /* Style for all cells */
+padding: 0.1em;
+}
+
+.basic-table tr .label,.basic-table tr .group-label {
+/* field labels for forms */
+font-weight: bold;
+text-align: right;
+padding-right: 1.5em;
+white-space: nowrap;
+width: 1%;
+}
+
+.basic-table tr .group-label { /* "header" for field label groups */
+font-size: 1.2em;
+padding: 2em 1.5em 0 0;
+}
+
+.basic-table tr.header-row,
+.basic-table tr.header-row-2 {
+background:url(../images/bkgd_subheader.gif) repeat-x bottom;
+text-transform:uppercase;
+}
+
+.basic-table tr th,.basic-table .header-row {
+font-weight: bold;
+text-align: left;
+}
+
+.basic-table .header-row td {
+border-bottom: 0.1em solid #000000;
+}
+
+.basic-table .header-row td a {
+color: #000000;
+}
+
+.basic-table .alternate-row { /* Alternating row style */
+background-color:#dfdfdf;
+}
+
+.basic-table .selected {
+background: #FFFCCF;
+}
+
+.basic-table .alternate-rowSelected {
+background: #FFF55F;
+}
+
+.basic-table .Validate { /*Style use by alt-row-style on list*/
+background: #A0D5F7;
+}
+
+.basic-table .alternate-rowValidate {
+/*Style use by alt-row-style on list*/
+background: #72A8F2;
+}
+
+.basic-table .Warn { /*Style use by alt-row-style on list*/
+background: #f55C5C;
+}
+
+.basic-table .alternate-rowWarn { /*Style use by alt-row-style on list*/
+background: #FC7455;
+}
+
+.basic-table tr .button-col { /* button column style - for the small
+collection of buttons used in lists */
+vertical-align: top;
+}
+
+.basic-table tr .button-col a {
+background:transparent url(../images/ptrn_button.gif) repeat-x scroll left center;
+border:2px solid #DDDDDD;
+color:#333333;
+float:left;
+font-weight:bold;
+margin:0 0.1em;
+padding:0.1em 0.4em;
+text-transform:uppercase;
+white-space:nowrap;
+}
+
+.basic-table tr .smallSubmit,.basic-table tr .smallSubmit:visited {
+background-color: #ffffff;
+border: #999999 solid 0.1em;
+color: #000099;
+font-size: 1em;
+font-weight: bold;
+margin: 0.2em;
+padding: 0.1em 0.2em 0.1em 0.2em;
+white-space: nowrap;
+}
+
+.basic-table tr .button-col a:hover,.basic-table tr .button-col a:active,.basic-table tr .smallSubmit:hover,.basic-table tr .smallSubmit:active {
+_color: #ff0000;
+text-decoration: none;
+background:transparent url(../images/ptrn_button_hover.gif) repeat-x scroll left center;
+}
+
+.basic-table .collapsed {
+visibility: collapse;
+}
+
+.field-lookup a {
+    background: url(../fieldlookup.gif) no-repeat 0 0;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0.3em;
+    width: 16px; /* Setting must be in px */
+    height: 16px; /* Setting must be in px */
+}

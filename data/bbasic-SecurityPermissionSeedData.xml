@@ -23,5 +23,10 @@
     <SecurityPermission description="ALL operations in the bbasic Component." permissionId="bbasic_ADMIN"/>
 
     <SecurityGroupPermission groupId="SUPER" permissionId="bbasic_ADMIN"/>
+    
+    <SecurityGroup groupId="bbasic_ADMIN" description="bbasic Admin group, has all permissions to execute BBasic tasks."/>
+    <SecurityGroupPermission groupId="bbasic_ADMIN" permissionId="bbasic_ADMIN"/>
+    <SecurityGroupPermission groupId="bbasic_ADMIN" permissionId="OFBTOOLS_VIEW"/>
+    
 
 </entity-engine-xml>
